@@ -5,8 +5,9 @@ import Footer from './Components/Footer'
 import Home from './Section/Home'
 import About from './Section/About'
 import Projects from './Section/Projects'
+import Contact from './Section/Contact'
 
-const sections = ["home", "about", "projects"]
+const sections = ["home", "about", "projects", "contact"]
 
 function App() {
   const [active, setActive] = useState("home");
@@ -29,11 +30,13 @@ function App() {
   return (
     <>
       <Header active={active} />
-      <div className='max-w-6xl mx-auto bg-bg-light px-4 sm:px-8 lg:px-12'>
+      <main className='bg-bg'>
         <Home />
         <About />
         <Projects />
-      </div>
+        <Contact/>
+      </main>
+      <Footer/>
     </>
   )
 }
